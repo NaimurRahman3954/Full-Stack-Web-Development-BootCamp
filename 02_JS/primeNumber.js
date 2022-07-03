@@ -8,6 +8,7 @@ function isPrime(number)
       }
    }
    return "Prime Number";
+
 }
 // number = prompt();
 isPrime(109);
