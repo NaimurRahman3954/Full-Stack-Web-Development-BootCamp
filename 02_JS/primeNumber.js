@@ -4,13 +4,10 @@ function isPrime(number)
    {
       if (number % i == 0)
       {
-         console.log("NOT a prime number");
-      }
-      else
-      {
-         console.log("Prime Number");
+         return "NOT a prime number";
       }
    }
+   return "Prime Number";
 }
 // number = prompt();
-isPrime(5);
+isPrime(109);
