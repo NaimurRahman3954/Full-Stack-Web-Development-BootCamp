@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON</title>
+</head>
+<body>
+  <h1>JSON</h1>  
+  <h2>JavaScript Object Notation</h2>
+  <script>
+
+    // The data we load from server in JSON format. We need to convert them into Object. That is why JSON is important.
+
+    const user = {
+      id: 245,
+      name: "Masud",
+      lover: {
+        name: "Jamila",
+        favFood: "Pizza"
+      },
+      friends: ["Kamal", "Jamal", "Tamal"],
+      friendsAge: [12, 13, 11]
+    };  // this is an object
+
+    const userJSON = JSON.stringify(user);  // object to JS Object Notation. Stringify is a method to do this
+    console.log(userJSON);   
+
+    const userFromJSON = JSON.parse(userJSON); // JSON to Object
+    console.log(userFromJSON);
+
+    // API placeholder
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(error => console.log(error));
+
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(json => console.log(json))
+
+  </script>
+</body> 
+</html> 
