@@ -5,8 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Management Company</title>
+    <style>
+    </style>
 </head>
 <body>
-    
+    <h1 onclick="handleClick()">Exploring Events</h1>
+    <p onclick="alert(new Date())">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, corrupti ducimus eos labore accusantium magnam consectetur alias omnis dolorem ad?</p>
+    <button onclick="alert('Why did you click me, Homie?')">Click Me</button>
+    <button id="new">New Button</button>
+
+    <script>
+        function handleClick(){
+            alert("What's up, Buddy?");
+            document.body.style.backgroundColor = "aquamarine";
+        }
+
+        let newButton = document.getElementById('new');
+        newButton.onclick = handleClick;
+
+        //modern approach
+        newButton.addEventListener('click', handleClick);
+
+        //one liner
+        document.getElementById('new').addEventListener('click',  function(){
+            alert("What's up, Buddy?");
+            document.body.style.backgroundColor = "aquamarine";
+        });
+    </script>
 </body>
 </html>
